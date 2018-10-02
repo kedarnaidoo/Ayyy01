@@ -3,18 +3,18 @@
 while (1)
 {
 echo "Enter a number: ";
-$line = fgets(STDIN);
-if ($line == FALSE)
+$value = fgets(STDIN);
+if ($value == FALSE)
 	break;
-$line = rtrim($line, "\n");
-if (is_numeric($line))
+$value = rtrim($value, "\n");
+if (is_numeric($value))
 {
-	if ($line % 2 == 0)
-		echo "The number $line is even \n";
+	if ($value % 2 == 0)
+		echo "The number $value is even \n";
 	else
-		echo "The number $line is odd \n";
+		echo "The number $value is odd \n";
 }
 else
-	echo "'$line' is not a number\n";
+	echo "'$value' is not a number\n";
 }
 ?>

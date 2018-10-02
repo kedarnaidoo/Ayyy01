@@ -1,24 +1,23 @@
 #!/usr/bin/php
 <?PHP
+
 function ft_split($str)
-{
-	$replace = eregi_replace("[ ]+", " ", $str);
-	$array = explode(" ", $replace);
+{	
+	$text = preg_replace("([ ]+)", " ", $str);
+	$array = explode(" ", $text);
 	sort($array, SORT_STRING);
 	return($array);
 }
-$list=array();
+$array_list=array();
 $i=0;
-	foreach ($argv as $elem)
+	foreach ($argv as $value)
 	{
-		if ($i)
-			$list = array_merge($list,ft_split($elem));
-		else
-			$i++;
+		if ($i++)
+			$array_list = array_merge($array_list,ft_split($value));
 	}
-	sort($list, SORT_STRING);
-	foreach($list as $elem)
+	sort($array_list, SORT_STRING);
+	foreach($array_list as $value)
 	{
-		echo $elem. "\n";
+		echo $value. "\n";
 	}
 ?>

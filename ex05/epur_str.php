@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?PHP
-$return = eregi_replace("[ ]+", " ", $argv[1]);
-$return = trim ($return, " ");
-$return = rtrim ($return, " ");
-echo "$return\n";
+$str = preg_replace("([ ]+)", " ", $argv[1]);
+$str = trim ($str, " ");
+$str = rtrim ($str, " ");
+echo "$str\n";
 ?>

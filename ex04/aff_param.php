@@ -1,11 +1,9 @@
 #!/usr/bin/php
 <?PHP
 $i=0;
-	foreach ($argv as $elem)
+	foreach ($argv as $value)
 	{
-		if ($i)
-			echo $elem. "\n";
-		else
-			$i++;
+		if ($i++)
+			echo $value. "\n";
 	}
 ?>

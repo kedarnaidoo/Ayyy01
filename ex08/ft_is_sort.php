@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?PHP
-function ft_is_asort($tab)
+function ft_asort($tab)
 {
 	$size = count($tab);
 	for($i = 0; $i < $size - 1; $i++)
@@ -13,7 +13,7 @@ function ft_is_asort($tab)
 	}
 	return (true);
 }
-function ft_is_dsort($tab)
+function ft_dsort($tab)
 {
 	$size = count($tab);
 	for($i = 0; $i < $size - 1; $i++)
@@ -29,8 +29,8 @@ function ft_is_dsort($tab)
 
 function ft_is_sort($tab)
 {
-	if (ft_is_asort($tab))
+	if (ft_asort($tab))
 		return (true);
-	return (ft_is_dsort($tab));
+	return (ft_dsort($tab));
 }
 ?>

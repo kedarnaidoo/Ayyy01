@@ -1,11 +1,13 @@
 #!/usr/bin/php
 <?PHP
+
 function ft_split($str)
 {
-	$replace = eregi_replace("[ ]+", " ", $str);
-	$array = explode(" ", $replace);
+	$pattern = "([ ]+)";
+	$replace = " ";
+	$text = preg_replace($pattern, $replace, $str);
+	$array = explode(" ", $text);
 	sort($array, SORT_STRING);
 	return($array);
 }
-print_r(ft_split("Hello     World AAA"));
 ?>
