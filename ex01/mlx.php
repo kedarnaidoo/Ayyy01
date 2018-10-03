@@ -1,13 +1,8 @@
 #!/usr/bin/php
 <?PHP
-$i = 0;
-
-while ($i < 1000)
+for ($i=0; $i < 1000; $i++)
 {
-	if ($i % 100 == 0 && $i != 0)
-		echo "\n"; 
-	echo "x";
-	$i++;
+	echo ("X");
 }
 echo "\n";
 ?>

@@ -3,7 +3,7 @@
 
 function ft_split($str)
 {	
-	$text = preg_replace("([ ]+)", " ", $str);
+	$text = preg_replace("([ ]+)", " ", trim($str));
 	$array = explode(" ", $text);
 	sort($array, SORT_STRING);
 	return($array);
